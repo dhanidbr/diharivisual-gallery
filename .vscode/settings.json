@@ -1,0 +1,11 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "Get-ExecutionPolicy": true,
+        "Set-ExecutionPolicy": true,
+        "/^npm --version$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "git add": true
+    }
+}

@@ -4,56 +4,93 @@ import { useState } from "react";
 
 const clients = [
   {
-    title: "The Wedding of",
-    names: "DIAR | DYRGA",
-    image: "https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop",
-    folderLink: "https://drive.google.com/drive/folders/1ePQZOOhfUEj1l7_BqmDmZMTvf0fttfZW?usp=sharing",
-    videos: [
-      // isi dengan ID dari streamable, contoh: "abcd12"
-    ],
-  },
-  {
-    title: "The Wedding of",
-    names: "TIARA | RIFKY",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
-    folderLink: "https://drive.google.com/drive/folders/1VyX1yM7pkeXojwXBmd5ST2KxSoXpe9Qi?usp=sharing",
-    videos: [
-      // isi dengan ID dari streamable, contoh: "abcd12"
-    ],
-  },
-  {
-    title: "The Wedding of",
-    names: "EGA | SHANIA",
-    image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=1200&auto=format&fit=crop",
-    folderLink: "https://drive.google.com/drive/folders/1ftF5xFxxZGlTpNyitYFQbr6oEX8O2SDa?usp=sharing",
-    videos: [
-      // isi dengan ID dari streamable, contoh: "abcd12"
-    ],
-  },
-  {
-    title: "The Wedding of",
     names: "VIA | DAFA",
-    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop",
-    folderLink: "https://drive.google.com/drive/folders/1JcXaJkZ5qj9oEFWqUwvcgwGPNlJPnMJp?usp=sharing",
+    image:
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop",
     videos: [
-      "ol4m5k",
-      "26hfni",
-      "vqkhcd",
-      "g5kkkb",
-      "zdin53",
-      "0iy1qj",
-      "tzwmtg",
-      "tsiw16",
-      "2stt2f",
+      "/videos/1.%20Kirab%20bridesmaid%20keluarga.mp4",
+      "/videos/2.%20Kirab%20Pengantin.mp4",
+      "/videos/3.%20Speech%20Pengantin.mp4",
+      "/videos/4.%20Ramah%20Tamah.mp4",
+      "/videos/5.%20Flashmob.mp4",
+      "/videos/6.%20Bridesmaid%20Time.mp4",
+      "/videos/7.%20Pemenang%20Lomba%20Joget.mp4",
+      "/videos/8.%20Lempar%20Bunga.mp4",
+      "/videos/9.%20Akad%20Moment.mp4",
     ],
   },
+
   {
-    title: "The Wedding of",
-    names: "DANDIKA | ZIRA",
-    image: "https://images.unsplash.com/photo-1529634806980-8c3b1f1f6c74?q=80&w=1200&auto=format&fit=crop",
-    folderLink: "https://drive.google.com/drive/folders/1OHcheeOuIci-cO97UaAaOvwc2Ai2DAyM?usp=sharing",
+    names: "TIARA | RIFKY",
+    image:
+      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
     videos: [
-      // isi dengan ID dari streamable, contoh: "abcd12"
+      "/videos/1.%20Beautyshoot%20Groom.mp4",
+      "/videos/2.%20Beautyshoot%20Bride.mp4",
+      "/videos/3.%20Beautyshoot%20Groom%20&%20Bride.mp4",
+      "/videos/4.%20Proses%20Pasrah%20Tinampi.mp4",
+      "/videos/5.%20Ijab%20Qabul.mp4",
+      "/videos/6.%20Moment%20After%20Sah.mp4",
+      "/videos/7.%20Proses%20Panggih.mp4",
+      "/videos/8.%20Proses%20Sungkeman.mp4",
+      "/videos/9.%20Beautyshoot%20After%20Sah.mp4",
+      "/videos/10.%20Wedding%20Entrance.mp4",
+      "/videos/11.%20Flashmoob%20&%20Lempar%20Handbucket.mp4",
+      "/videos/12.%20Wedding%20Tiara%20Rifky%20(highlight%20wedding).mp4",
+    ],
+  },
+
+  {
+    names: "EGA | SHANIA",
+    image:
+      "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=1200&auto=format&fit=crop",
+    videos: [
+      "/videos/1.%20Dekorasi.mp4",
+      "/videos/2.%20Look%20Resepsi.mp4",
+      "/videos/3.%20Beautyshoot%20couple.mp4",
+      "/videos/4.%20Wedding%20entrance.mp4",
+      "/videos/5.%20Ramah%20tamah.mp4",
+      "/videos/6.%20Ucapan%20selamat.mp4",
+      "/videos/7.%20Flashmob.mp4",
+      "/videos/8.%20Lempar%20bunga.mp4",
+      "/videos/9.%20Beautyshoot%20after%20resepsi.mp4",
+      "/videos/10.%20Beautyshoot%20after%20resepsi.mp4",
+      "/videos/11.%20Wedding%20Ega%20Refy%20(highlight%20wedding).mp4",
+    ],
+  },
+
+  {
+    names: "DIAR | DYRGA",
+    image:
+      "https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop",
+    videos: [
+      "/videos/1.%20Beauty%20shoot%20groom.mp4",
+      "/videos/2.%20Beauty%20shoot%20bride.mp4",
+      "/videos/3.%20Prosesi%20Pasrah%20Tinampi.mp4",
+      "/videos/4.%20Ijab%20qabul.mp4",
+      "/videos/5.%20Moment%20After%20Sah.mp4",
+      "/videos/6.%20Proses%20panggih.mp4",
+      "/videos/7.%20Prosesi%20sungkeman.mp4",
+      "/videos/8.%20Wedding%20Entrances.mp4",
+      "/videos/9.%20Ramah%20tamah.mp4",
+      "/videos/10.%20Flashmoob%20&%20lempar%20handbucket.mp4",
+      "/videos/11.%20Reels%20Akad%20Nikah.mp4",
+    ],
+  },
+
+  {
+    names: "DANDIKA | ZIRA",
+    image:
+      "https://images.unsplash.com/photo-1529634806980-8c3b1f1f6c74?q=80&w=1200&auto=format&fit=crop",
+    videos: [
+      "/videos/1.%20Beautyshoot%20CPW.mp4",
+      "/videos/2.%20Beautyshoot%20Couple.mp4",
+      "/videos/3.%20Pedang%20pora.mp4",
+      "/videos/4.%20Ramah%20Tamah.mp4",
+      "/videos/5.%20Dance%20Time.mp4",
+      "/videos/6.%20Lempar%20Bunga.mp4",
+      "/videos/7.%20Karaoke%20Time.mp4",
+      "/videos/8.%20Reels%20Pedang%20Pora.mp4",
     ],
   },
 ];
@@ -64,44 +101,33 @@ export default function Home() {
   if (selectedClient) {
     return (
       <main className="min-h-screen bg-[#f8f5ef] text-[#2f2a25]">
-        <section className="mx-auto max-w-6xl px-5 py-8 md:px-10 md:py-12">
+        <section className="mx-auto max-w-6xl px-5 py-10">
           <button
             onClick={() => setSelectedClient(null)}
-            className="mb-8 rounded-full border border-[#9b7b55]/30 px-5 py-2 text-sm text-[#9b7b55] transition hover:bg-[#9b7b55] hover:text-white"
+            className="mb-8 text-sm text-[#9b7b55]"
           >
             ← Back to Gallery
           </button>
 
-          <header className="mb-10 text-center">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.45em] text-[#9b7b55]">
-              The Wedding of
-            </p>
-            <h1 className="font-serif text-4xl font-light tracking-wide md:text-6xl">
-              {selectedClient.names}
-            </h1>
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-[#6d6259] md:text-base">
-              Play your wedding moments directly from this page.
-            </p>
-          </header>
+          <h1 className="text-center text-4xl font-serif mb-10">
+            {selectedClient.names}
+          </h1>
 
-          <div className="grid gap-7 md:grid-cols-2">
-            {selectedClient.videos.map((videoId, index) => (
-              <div
-                key={videoId}
-                className="overflow-hidden rounded-[26px] bg-white shadow-md"
-              >
-                <iframe
-                  src={`https://streamable.com/e/${videoId}`}
-                  className="aspect-video w-full"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                  title={`${selectedClient.names} Video ${index + 1}`}
-                />
-                <div className="px-5 py-4">
-                  <p className="text-sm font-medium text-[#6d6259]">
-                    Video {index + 1}
-                  </p>
-                </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {selectedClient.videos.map((video, index) => (
+              <div key={index} className="bg-white rounded-xl shadow">
+                <video
+                  controls
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  className="w-full rounded-t-xl"
+                >
+                  <source src={video} type="video/mp4" />
+                </video>
+
+                <p className="p-4 text-sm text-gray-600">
+                  Video {index + 1}
+                </p>
               </div>
             ))}
           </div>
@@ -111,57 +137,25 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f8f5ef] text-[#2f2a25]">
-      <section className="mx-auto max-w-7xl px-5 py-10 md:px-10 md:py-16">
-        <header className="mb-10 text-center md:mb-14">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.45em] text-[#9b7b55]">
-            DihariVisual
-          </p>
-          <h1 className="font-serif text-4xl font-light tracking-wide md:text-6xl">
-            Client Wedding Gallery
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-[#6d6259] md:text-base">
-            Select your moment and open your private wedding video gallery.
-          </p>
-        </header>
+    <main className="min-h-screen bg-[#f8f5ef] p-10">
+      <h1 className="text-center text-4xl font-serif mb-10">
+        Client Wedding Gallery
+      </h1>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {clients.map((client, index) => (
-            <button
-              key={index}
-              onClick={() => setSelectedClient(client)}
-              className="group relative block aspect-[4/5] overflow-hidden rounded-[28px] text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-            >
-              <img
-                src={client.image}
-                alt={client.names}
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 text-center text-white">
-                <p className="mb-1 text-xs uppercase tracking-[0.25em] opacity-90">
-                  {client.title}
-                </p>
-                <h2 className="font-serif text-2xl font-light tracking-wide">
-                  {client.names}
-                </h2>
-              </div>
-            </button>
-          ))}
-        </div>
-
-        <footer className="mt-12 text-center text-sm text-[#7a6f65]">
-          <p>For questions or access issues, please contact us on Instagram.</p>
-          <a
-            href="https://instagram.com/DihariVisual"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-block font-medium text-[#9b7b55] hover:underline"
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {clients.map((client, index) => (
+          <button
+            key={index}
+            onClick={() => setSelectedClient(client)}
+            className="relative rounded-xl overflow-hidden"
           >
-            @DihariVisual
-          </a>
-        </footer>
-      </section>
+            <img src={client.image} className="w-full h-full object-cover" />
+            <div className="absolute bottom-0 w-full bg-black/50 text-white p-3 text-center">
+              {client.names}
+            </div>
+          </button>
+        ))}
+      </div>
     </main>
   );
 }
